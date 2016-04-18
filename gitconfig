@@ -1,0 +1,8 @@
+[user]
+	email = hugh.grigg@gmail.com
+	name = Hugh Grigg
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	pf = push --force-with-lease
+
