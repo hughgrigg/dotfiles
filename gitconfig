@@ -6,3 +6,5 @@
 [alias]
 	pf = push --force-with-lease
 
+[push]
+	default = matching
