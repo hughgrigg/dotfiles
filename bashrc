@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="/home/work/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -26,12 +26,15 @@ export SCM_CHECK=true
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
+export PATH=$PATH:/usr/local/go/bin
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/projects/go
+
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
 export EDITOR=vim
-
-export PATH=$PATH:/home/work/Vagrant/lc/maker-frontend/app/node_modules/.bin
 
 alias suijici='cedict-shuffler ~/cedict_1_0_ts_utf-8_mdbg.txt'
 suijici
@@ -45,7 +48,7 @@ function saylang() {
 }
 
 
-export NVM_DIR="/home/work/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias urldecode='python -c "import sys, urllib as ul; \
