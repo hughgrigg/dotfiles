@@ -27,8 +27,7 @@ export SCM_CHECK=true
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
 export PATH=$PATH:/usr/local/go/bin
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/projects/go
 export GOPATH=$HOME/projects/go
 
 # Load Bash It
