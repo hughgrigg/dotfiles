@@ -11,6 +11,8 @@
     ~/.vimrc: vimrc
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [git config --global core.excludesfile '$HOME/.gitignore_global', Setting up global gitignore]
