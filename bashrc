@@ -52,6 +52,11 @@ export NVM_DIR="$HOME/.nvm"
 
 alias urldecode='python -c "import sys, urllib as ul; \
 	    print ul.unquote_plus(sys.argv[1])"'
+alias urlencode='python -c "import urllib, sys; print urllib.quote(sys.argv[1])"'
 
 nvm use 5.0 > /dev/null
+
+rot() {
+	echo $1 | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+}
 
