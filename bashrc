@@ -97,3 +97,6 @@ source $BASH_IT/bash_it.sh
 if [[ ! $TERM =~ screen ]]; then
 	exec tmux
 fi
+
+export PATH=$PATH:$HOME/.config/composer/vendor/bin/
+
