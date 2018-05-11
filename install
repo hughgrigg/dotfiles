@@ -50,3 +50,8 @@ sudo apt install tmux docker docker-compose git golang ruby ruby-dev
 go get github.com/spf13/hugo
 go get github.com/hughgrigg/cedict-shuffler
 
+# Inotify Watches Limit
+# https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+sudo cp idea.conf /etc/sysctl.d/
+sudo sysctl -p --system
+
