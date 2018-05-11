@@ -12,3 +12,13 @@ cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+# Stop focus stealing!
+# https://unix.stackexchange.com/questions/261003/preventing-other-gui-applications-from-stealing-focus
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows strict
+gsettings set org.mate.Marco.general focus-new-windows strict
+# https://bertrandbenoit.blogspot.co.uk/2011/09/change-window-behavior-to-prevent-focus.html
+gconftool-2 --set /apps/metacity/general/focus_new_windows --type string strict
+gconftool-2 --set /apps/metacity/general/no_focus_windows --type string "(not true)"
+gconftool-2 --get /apps/metacity/general/focus_new_windows
+gconftool-2 --get /apps/metacity/general/no_focus_windows

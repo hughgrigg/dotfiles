@@ -2,7 +2,8 @@
 	email = hugh.grigg@gmail.com
 	name = Hugh Grigg
 [core]
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = ${HOME}/.gitignore_global
+	editor = vim
 [alias]
 	pf = push --force-with-lease
 

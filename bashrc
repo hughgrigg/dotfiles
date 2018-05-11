@@ -62,7 +62,7 @@ rot() {
 
 
 # Path to the bash it configuration
-export BASH_IT="/home/gongzuo/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -73,7 +73,7 @@ export BASH_IT_THEME='bobby'
 # export BASH_IT_REMOTE='bash-it'
 
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
+export GIT_HOSTING='git@git.github.com'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
@@ -100,3 +100,5 @@ fi
 
 export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GPG_TTY=$(tty)
