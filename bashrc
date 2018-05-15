@@ -102,3 +102,7 @@ export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export GPG_TTY=$(tty)
+
+# History ignore
+export HISTIGNORE="${HISTIGNORE}:w3m*"
+
